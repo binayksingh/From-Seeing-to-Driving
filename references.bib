@@ -1,0 +1,1267 @@
+% IEEEtran control: print repeated author names in full instead of a dash
+
+% =====================================================================
+% refs.bib -- TPAMI survey blueprint
+% Verification tags (in the comment line above each entry):
+%   [V] = title/authors/venue checked against an online source on 2026-11-18
+%   [K] = well-established paper entered from prior knowledge; re-check
+%         author list, pages and final venue before submission
+%   [P] = preprint at time of writing; re-check for a published version
+% =====================================================================
+
+% ---------------------------------------------------------------------
+% Prior surveys (for positioning, Table 1)
+% ---------------------------------------------------------------------
+
+% [V]
+@inproceedings{cui2024survey,
+  title     = {A Survey on Multimodal Large Language Models for Autonomous Driving},
+  author    = {Cui, Can and Ma, Yunsheng and Cao, Xu and Ye, Wenqian and Zhou, Yang and Liang, Kaizhao and Chen, Jintai and Lu, Juanwu and Yang, Zichong and Liao, Kuei-Da and Tianren Gao and Erlong Li and Kun Tang and Zhipeng Cao and Tong Zhou and Ao Liu and Xinrui Yan and Shuqi Mei and Jianguo Cao and Ziran Wang and Chao Zheng},
+  booktitle = {Proc. IEEE/CVF Winter Conf. Appl. Comput. Vis. Workshops (WACVW)},
+  pages     = {958--979},
+  year      = {2024},
+  doi       = {10.1109/WACVW60836.2024.00106}
+}
+
+% [V]
+@article{zhou2024vlmsurvey,
+  title   = {Vision Language Models in Autonomous Driving: A Survey and Outlook},
+  author  = {Zhou, Xingcheng and Liu, Mingyu and Yurtsever, Ekim and Zagar, Bare Luka and Zimmer, Walter and Cao, Hu and Knoll, Alois C.},
+  journal = {IEEE Trans. Intell. Veh.},
+  pages   = {1--20},
+  year    = {2024},
+  doi     = {10.1109/TIV.2024.3402136},
+  note    = {Early Access}
+}
+
+% [V]
+@article{yang2023llm4drive,
+  title   = {{LLM4Drive}: A Survey of Large Language Models for Autonomous Driving},
+  author  = {Yang, Zhenjie and Jia, Xiaosong and Li, Hongyang and Yan, Junchi},
+  journal = {arXiv preprint arXiv:2311.01043},
+  year    = {2023}
+}
+
+% [V]
+@inproceedings{jiang2025vla4ad,
+  title     = {A Survey on Vision-Language-Action Models for Autonomous Driving},
+  author    = {Jiang, Sicong and Huang, Zilin and Qian, Kangan and Luo, Ziang and Zhu, Tianze and Zhong, Yang and others},
+  booktitle = {Proc. IEEE/CVF Int. Conf. Comput. Vis. Workshops (ICCVW)},
+  pages     = {4583--4595},
+  year      = {2025}
+}
+
+% [V] TMLR 03/2026 (arXiv:2603.11093)
+@article{yu2026reasoningsurvey,
+  title   = {A Survey of Reasoning in Autonomous Driving Systems: Open Challenges and Emerging Paradigms},
+  author  = {Yu, Kejin and Sun, Yuhan and Wu, Taiqiang and Zhang, Ruixu and Lin, Zhiqiang and Meng, Yuxin and Wang, Junjie and Yang, Yujiu},
+  journal = {Trans. Mach. Learn. Res.},
+  note    = {arXiv:2603.11093},
+  year    = {2026}
+}
+
+% [V][P]
+@article{tang2026actiongrounded,
+  title   = {Beyond Textual Chain-of-Thought: A Survey on Action-Grounded Reasoning in Autonomous Driving},
+  author  = {Tang, Zhengxu and Zhang, Xiaozhou and Cui, Guofeng and Gong, Ziyu and Wang, Zi and Shi, Yunfei and others},
+  journal = {arXiv preprint arXiv:2609.01659},
+  year    = {2026}
+}
+
+% [V]
+@article{gao2026fmscenario,
+  title   = {Foundation Models in Autonomous Driving: A Survey on Scenario Generation and Scenario Analysis},
+  author  = {Gao, Yuan and Piccinini, Mattia and Yuchen Zhang and Dingrui Wang and Korbinian Moller and Roberto Brusnicki and Baha Zarrouki and Alessio Gambi and Jan Frederik Totz and Kai Storms and Steven Peters and Andrea Stocco and Bassam Alrifaee and Marco Pavone and Johannes Betz},
+  journal = {IEEE Open J. Intell. Transp. Syst.},
+  year    = {2026},
+  doi     = {10.1109/OJITS.2026.3660686},
+  note    = {Early Access}
+}
+
+% ---------------------------------------------------------------------
+% Foundations: VLMs, VLAs, reasoning, RL
+% ---------------------------------------------------------------------
+
+% [V]
+@inproceedings{radford2021clip,
+  title     = {Learning Transferable Visual Models From Natural Language Supervision},
+  author    = {Radford, Alec and Kim, Jong Wook and Hallacy, Chris and Ramesh, Aditya and Goh, Gabriel and Agarwal, Sandhini and Sastry, Girish and Askell, Amanda and Mishkin, Pamela and Clark, Jack and Gretchen Krueger and Ilya Sutskever},
+  booktitle = {Proc. Int. Conf. Mach. Learn. (ICML)},
+  volume    = {139},
+  pages     = {8748--8763},
+  year      = {2021}
+}
+
+% [V]
+@inproceedings{liu2023llava,
+  title     = {Visual Instruction Tuning},
+  author    = {Liu, Haotian and Li, Chunyuan and Wu, Qingyang and Lee, Yong Jae},
+  booktitle = {Adv. Neural Inf. Process. Syst. (NeurIPS)},
+  volume    = {36},
+  pages     = {34892--34916},
+  year      = {2023},
+  doi       = {10.52202/075280-1516}
+}
+
+% [V]
+@article{bai2025qwen25vl,
+  title   = {{Qwen2.5-VL} Technical Report},
+  author  = {Bai, Shuai and Chen, Keqin and Liu, Xuejing and Wang, Jialin and Ge, Wenbin and Song, Sibo and Dang, Kai and Wang, Peng and Wang, Shijie and Tang, Jun and Humen Zhong and Yuanzhi Zhu and Mingkun Yang and Zhaohai Li and Jianqiang Wan and Pengfei Wang and Wei Ding and Zheren Fu and Yiheng Xu and Jiabo Ye and Xi Zhang and Tianbao Xie and Zesen Cheng and Hang Zhang and Zhibo Yang and Haiyang Xu and Junyang Lin},
+  journal = {arXiv preprint arXiv:2502.13923},
+  year    = {2025}
+}
+
+% [V]
+@inproceedings{wei2022cot,
+  title     = {Chain-of-Thought Prompting Elicits Reasoning in Large Language Models},
+  author    = {Wei, Jason and Wang, Xuezhi and Schuurmans, Dale and Bosma, Maarten and Ichter, Brian and Xia, Fei and Chi, Ed and Le, Quoc V. and Zhou, Denny},
+  booktitle = {Adv. Neural Inf. Process. Syst. (NeurIPS)},
+  volume    = {35},
+  pages     = {24824--24837},
+  year      = {2022},
+  doi       = {10.52202/068431-1800}
+}
+
+% [V]
+@article{shao2024deepseekmath,
+  title   = {{DeepSeekMath}: Pushing the Limits of Mathematical Reasoning in Open Language Models},
+  author  = {Shao, Zhihong and Wang, Peiyi and Zhu, Qihao and Xu, Runxin and Song, Junxiao and Bi, Xiao and Zhang, Haowei and Zhang, Mingchuan and Li, Y. K. and Wu, Y. and Guo, Daya},
+  journal = {arXiv preprint arXiv:2402.03300},
+  year    = {2024}
+}
+
+% [V]
+@article{deepseek2025r1,
+  title   = {{DeepSeek-R1} Incentivizes Reasoning in {LLMs} through Reinforcement Learning},
+  author  = {Daya Guo and Dejian Yang and Haowei Zhang and Junxiao Song and Peiyi Wang and Qihao Zhu and Runxin Xu and Ruoyu Zhang and Shirong Ma and Xiao Bi and Xiaokang Zhang and Xingkai Yu and Yu Wu and Z. F. Wu and Zhibin Gou and Zhihong Shao and Zhuoshu Li and Ziyi Gao and Aixin Liu and Bing Xue and Bingxuan Wang and Bochao Wu and Bei Feng and Chengda Lu and Chenggang Zhao and Chengqi Deng and Chong Ruan and Damai Dai and Deli Chen and Dongjie Ji and Erhang Li and Fangyun Lin and Fucong Dai and Fuli Luo and Guangbo Hao and Guanting Chen and Guowei Li and H. Zhang and Hanwei Xu and Honghui Ding and Huazuo Gao and Hui Qu and Hui Li and Jianzhong Guo and Jiashi Li and Jingchang Chen and Jingyang Yuan and Jinhao Tu and Junjie Qiu and Junlong Li and J. L. Cai and Jiaqi Ni and Jian Liang and Jin Chen and Kai Dong and Kai Hu and Kaichao You and Kaige Gao and Kang Guan and Kexin Huang and Kuai Yu and Lean Wang and Lecong Zhang and Liang Zhao and Litong Wang and Liyue Zhang and Lei Xu and Leyi Xia and Mingchuan Zhang and Minghua Zhang and Minghui Tang and Mingxu Zhou and Meng Li and Miaojun Wang and Mingming Li and Ning Tian and Panpan Huang and Peng Zhang and Qiancheng Wang and Qinyu Chen and Qiushi Du and Ruiqi Ge and Ruisong Zhang and Ruizhe Pan and Runji Wang and R. J. Chen and R. L. Jin and Ruyi Chen and Shanghao Lu and Shangyan Zhou and Shanhuang Chen and Shengfeng Ye and Shiyu Wang and Shuiping Yu and Shunfeng Zhou and Shuting Pan and S. S. Li and Shuang Zhou and Shaoqing Wu and Tao Yun and Tian Pei and Tianyu Sun and T. Wang and Wangding Zeng and Wen Liu and Wenfeng Liang and Wenjun Gao and Wenqin Yu and Wentao Zhang and W. L. Xiao and Wei An and Xiaodong Liu and Xiaohan Wang and Xiaokang Chen and Xiaotao Nie and Xin Cheng and Xin Liu and Xin Xie and Xingchao Liu and Xinyu Yang and Xinyuan Li and Xuecheng Su and Xuheng Lin and X. Q. Li and Xiangyue Jin and Xiaojin Shen and Xiaosha Chen and Xiaowen Sun and Xiaoxiang Wang and Xinnan Song and Xinyi Zhou and Xianzu Wang and Xinxia Shan and Y. K. Li and Y. Q. Wang and Y. X. Wei and Yang Zhang and Yanhong Xu and Yao Li and Yao Zhao and Yaofeng Sun and Yaohui Wang and Yi Yu and Yichao Zhang and Yifan Shi and Yiliang Xiong and Ying He and Yishi Piao and Yisong Wang and Yixuan Tan and Yiyang Ma and Yiyuan Liu and Yongqiang Guo and Yuan Ou and Yuduan Wang and Yue Gong and Yuheng Zou and Yujia He and Yunfan Xiong and Yuxiang Luo and Yuxiang You and Yuxuan Liu and Yuyang Zhou and Y. X. Zhu and Yanping Huang and Yaohui Li and Yi Zheng and Yuchen Zhu and Yunxian Ma and Ying Tang and Yukun Zha and Yuting Yan and Z. Z. Ren and Zehui Ren and Zhangli Sha and Zhe Fu and Zhean Xu and Zhenda Xie and Zhengyan Zhang and Zhewen Hao and Zhicheng Ma and Zhigang Yan and Zhiyu Wu and Zihui Gu and Zijia Zhu and Zijun Liu and Zilin Li and Ziwei Xie and Ziyang Song and Zizheng Pan and Zhen Huang and Zhipeng Xu and Zhongyu Zhang and Zhen Zhang},
+  journal = {Nature},
+  volume  = {645},
+  number  = {8081},
+  pages   = {633--638},
+  year    = {2025},
+  doi     = {10.1038/s41586-025-09422-z}
+}
+
+% [V]
+@inproceedings{hao2024coconut,
+  title     = {Training Large Language Models to Reason in a Continuous Latent Space},
+  author    = {Hao, Shibo and Sukhbaatar, Sainbayar and Su, DiJia and Li, Xian and Hu, Zhiting and Weston, Jason and Tian, Yuandong},
+  booktitle = {Proc. Conf. Lang. Model. (COLM)},
+  year      = {2025}
+}
+
+% [V] CoRL (PMLR v229) author order
+@inproceedings{zitkovich2023rt2,
+  title     = {{RT-2}: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control},
+  author    = {Zitkovich, Brianna and Yu, Tianhe and others},
+  booktitle = {Proc. Conf. Robot Learn. (CoRL)},
+  pages     = {2165--2183},
+  year      = {2023}
+}
+
+% [V]
+@inproceedings{kim2024openvla,
+  title     = {{OpenVLA}: An Open-Source Vision-Language-Action Model},
+  author    = {Kim, Moo Jin and Pertsch, Karl and Karamcheti, Siddharth and Xiao, Ted and Balakrishna, Ashwin and Nair, Suraj and Rafailov, Rafael and Foster, Ethan and Lam, Grace and Sanketi, Pannag and Quan Vuong and Thomas Kollar and Benjamin Burchfiel and Russ Tedrake and Dorsa Sadigh and Sergey Levine and Percy Liang and Chelsea Finn},
+  booktitle = {Proc. Conf. Robot Learn. (CoRL)},
+  volume    = {270},
+  pages     = {2679--2713},
+  year      = {2025}
+}
+
+% [V]
+@inproceedings{black2024pi0,
+  title     = {$\pi_0$: A Vision-Language-Action Flow Model for General Robot Control},
+  author    = {Kevin Black and Noah Brown and Danny Driess and Adnan Esmail and Michael Robert Equi and Chelsea Finn and Niccolo Fusai and Lachy Groom and Karol Hausman and Brian Ichter and Szymon Jakubczak and Tim Jones and Liyiming Ke and Sergey Levine and Adrian Li-Bell and Mohith Mothukuri and Suraj Nair and Karl Pertsch and Lucy Xiaoyang Shi and Laura Smith and James Tanner and Quan Vuong and Anna Walling and Haohuan Wang and Ury Zhilinsky},
+  booktitle = {Proc. Robot.: Sci. Syst. (RSS)},
+  year      = {2025},
+  doi       = {10.15607/RSS.2025.XXI.010}
+}
+
+% [V]
+@article{nvidia2025cosmosreason1,
+  title   = {{Cosmos-Reason1}: From Physical Common Sense to Embodied Reasoning},
+  author  = {{NVIDIA} and Alisson Azzolini and Junjie Bai and Hannah Brandon and Jiaxin Cao and Prithvijit Chattopadhyay and Huayu Chen and Jinju Chu and Yin Cui and Jenna Diamond and Yifan Ding and Liang Feng and Francesco Ferroni and Rama Govindaraju and Jinwei Gu and Siddharth Gururani and Imad El Hanafi and Zekun Hao and Jacob Huffman and Jingyi Jin and Brendan Johnson and Rizwan Khan and George Kurian and Elena Lantz and Nayeon Lee and Zhaoshuo Li and Xuan Li and Maosheng Liao and Tsung-Yi Lin and Yen-Chen Lin and Ming-Yu Liu and Xiangyu Lu and Alice Luo and Andrew Mathau and Yun Ni and Lindsey Pavao and Wei Ping and David W. Romero and Misha Smelyanskiy and Shuran Song and Lyne Tchapmi and Andrew Z. Wang and Boxin Wang and Haoxiang Wang and Fangyin Wei and Jiashu Xu and Yao Xu and Dinghao Yang and Xiaodong Yang and Zhuolin Yang and Jingxu Zhang and Xiaohui Zeng and Zhe Zhang},
+  journal = {arXiv preprint arXiv:2503.15558},
+  year    = {2025}
+}
+
+% ---------------------------------------------------------------------
+% Classical / end-to-end driving background
+% ---------------------------------------------------------------------
+
+% [V]
+@inproceedings{hu2023uniad,
+  title     = {Planning-oriented Autonomous Driving},
+  author    = {Hu, Yihan and Yang, Jiazhi and Chen, Li and Li, Keyu and Sima, Chonghao and Zhu, Xizhou and Chai, Siqi and Du, Senyao and Lin, Tianwei and Wang, Wenhai and Lewei Lu and Xiaosong Jia and Qiang Liu and Jifeng Dai and Yu Qiao and Hongyang Li},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)},
+  pages     = {17853--17862},
+  year      = {2023},
+  doi       = {10.1109/CVPR52729.2023.01712}
+}
+
+% [V]
+@inproceedings{jiang2023vad,
+  title     = {{VAD}: Vectorized Scene Representation for Efficient Autonomous Driving},
+  author    = {Jiang, Bo and Chen, Shaoyu and Xu, Qing and Liao, Bencheng and Chen, Jiajie and Zhou, Helong and Zhang, Qian and Liu, Wenyu and Huang, Chang and Wang, Xinggang},
+  booktitle = {Proc. IEEE/CVF Int. Conf. Comput. Vis. (ICCV)},
+  pages     = {8340--8350},
+  year      = {2023},
+  doi       = {10.1109/ICCV51070.2023.00766}
+}
+
+% [V]
+@inproceedings{li2024egostatus,
+  title     = {Is Ego Status All You Need for Open-Loop End-to-End Autonomous Driving?},
+  author    = {Li, Zhiqi and Yu, Zhiding and Lan, Shiyi and Li, Jiahan and Kautz, Jan and Lu, Tong and Alvarez, Jose M.},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)},
+  pages     = {14864--14873},
+  year      = {2024},
+  doi       = {10.1109/CVPR52733.2024.01408}
+}
+
+% [V]
+@article{hu2023gaia1,
+  title   = {{GAIA-1}: A Generative World Model for Autonomous Driving},
+  author  = {Hu, Anthony and Russell, Lloyd and Yeo, Hudson and Murez, Zak and Fedoseev, George and Kendall, Alex and Shotton, Jamie and Corrado, Gianluca},
+  journal = {arXiv preprint arXiv:2309.17080},
+  year    = {2023}
+}
+
+% ---------------------------------------------------------------------
+% Datasets, benchmarks, simulators
+% ---------------------------------------------------------------------
+
+% [V]
+@inproceedings{caesar2020nuscenes,
+  title     = {{nuScenes}: A Multimodal Dataset for Autonomous Driving},
+  author    = {Caesar, Holger and Bankiti, Varun and Lang, Alex H. and Vora, Sourabh and Liong, Venice Erin and Xu, Qiang and Krishnan, Anush and Pan, Yu and Baldan, Giancarlo and Beijbom, Oscar},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)},
+  pages     = {11621--11631},
+  year      = {2020},
+  doi       = {10.1109/CVPR42600.2020.01164}
+}
+
+% [V]
+@inproceedings{dosovitskiy2017carla,
+  title     = {{CARLA}: An Open Urban Driving Simulator},
+  author    = {Dosovitskiy, Alexey and Ros, German and Codevilla, Felipe and Lopez, Antonio and Koltun, Vladlen},
+  booktitle = {Proc. Conf. Robot Learn. (CoRL)},
+  volume    = {78},
+  pages     = {1--16},
+  year      = {2017}
+}
+
+% [V]
+@inproceedings{jia2024bench2drive,
+  title     = {{Bench2Drive}: Towards Multi-Ability Benchmarking of Closed-Loop End-to-End Autonomous Driving},
+  author    = {Jia, Xiaosong and Yang, Zhenjie and Li, Qifeng and Zhang, Zhiyuan and Yan, Junchi},
+  booktitle = {Adv. Neural Inf. Process. Syst. (NeurIPS) Datasets and Benchmarks Track},
+  volume    = {37},
+  pages     = {819--844},
+  year      = {2024},
+  doi       = {10.52202/079017-0025}
+}
+
+% [V]
+@inproceedings{dauner2024navsim,
+  title     = {{NAVSIM}: Data-Driven Non-Reactive Autonomous Vehicle Simulation and Benchmarking},
+  author    = {Dauner, Daniel and Hallgarten, Marcel and Li, Tianyu and Weng, Xinshuo and Huang, Zhiyu and Yang, Zetong and Li, Hongyang and Gilitschenski, Igor and Ivanovic, Boris and Pavone, Marco and Geiger, Andreas and Chitta, Kashyap},
+  booktitle = {Adv. Neural Inf. Process. Syst. (NeurIPS) Datasets and Benchmarks Track},
+  volume    = {37},
+  pages     = {28706--28719},
+  year      = {2024},
+  doi       = {10.52202/079017-0902}
+}
+
+% [V] CoRL 2025 full author list verified
+@inproceedings{cao2025pseudosim,
+  title     = {Pseudo-Simulation for Autonomous Driving},
+  author    = {Cao, Wei and Hallgarten, Marcel and Li, Tianyu and Dauner, Daniel and Gu, Xunjiang and Wang, Caojun and Miron, Yakov and Aiello, Marco and Li, Hongyang and Gilitschenski, Igor and Ivanovic, Boris and Pavone, Marco and Geiger, Andreas and Chitta, Kashyap},
+  booktitle = {Proc. Conf. Robot Learn. (CoRL)},
+  year      = {2025}
+}
+
+% [V]
+@inproceedings{xu2026wode2e,
+  title     = {{WOD-E2E}: {Waymo} Open Dataset for End-to-End Driving in Challenging Long-tail Scenarios},
+  author    = {Xu, Runsheng and Lin, Hubert and Jeon, Wonseok and Feng, Hao and Zou, Yuliang and Sun, Liting and Gorman, John and Tolstaya, Ekaterina and Tang, Sarah and White, Brandyn and Sapp, Ben and Tan, Mingxing and Hwang, Jyh-Jing and Anguelov, Dragomir},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)},
+  year      = {2026}
+}
+
+% [V]
+@inproceedings{kim2018bddx,
+  title     = {Textual Explanations for Self-Driving Vehicles},
+  author    = {Kim, Jinkyu and Rohrbach, Anna and Darrell, Trevor and Canny, John and Akata, Zeynep},
+  booktitle = {Proc. Eur. Conf. Comput. Vis. (ECCV)},
+  pages     = {563--578},
+  year      = {2018},
+  doi       = {10.1007/978-3-030-01216-8_35}
+}
+
+% [V]
+@inproceedings{deruyttere2019talk2car,
+  title     = {{Talk2Car}: Taking Control of Your Self-Driving Car},
+  author    = {Deruyttere, Thierry and Vandenhende, Simon and Grujicic, Dusan and Van Gool, Luc and Moens, Marie-Francine},
+  booktitle = {Proc. Conf. Empirical Methods Nat. Lang. Process. (EMNLP-IJCNLP)},
+  pages     = {2088--2098},
+  year      = {2019},
+  doi       = {10.18653/v1/D19-1215}
+}
+
+% [V]
+@inproceedings{malla2023drama,
+  title     = {{DRAMA}: Joint Risk Localization and Captioning in Driving},
+  author    = {Malla, Srikanth and Choi, Chiho and Dwivedi, Isht and Choi, Joon Hee and Li, Jiachen},
+  booktitle = {Proc. IEEE/CVF Winter Conf. Appl. Comput. Vis. (WACV)},
+  pages     = {1043--1052},
+  year      = {2023},
+  doi       = {10.1109/WACV56688.2023.00110}
+}
+
+% [V]
+@inproceedings{qian2024nuscenesqa,
+  title     = {{NuScenes-QA}: A Multi-Modal Visual Question Answering Benchmark for Autonomous Driving Scenario},
+  author    = {Qian, Tianwen and Chen, Jingjing and Zhuo, Linhai and Jiao, Yang and Jiang, Yu-Gang},
+  booktitle = {Proc. AAAI Conf. Artif. Intell. (AAAI)},
+  volume    = {38},
+  number    = {5},
+  pages     = {4542--4550},
+  year      = {2024},
+  doi       = {10.1609/aaai.v38i5.28253}
+}
+
+% [V]
+@inproceedings{marcu2024lingoqa,
+  title     = {{LingoQA}: Visual Question Answering for Autonomous Driving},
+  author    = {Marcu, Ana-Maria and Chen, Long and H{\"u}nermann, Jan and Karnsund, Alice and Hanotte, Benoit and Chidananda, Prajwal and Nair, Saurabh and Badrinarayanan, Vijay and Kendall, Alex and Shotton, Jamie and Arani, Elahe and Sinavski, Oleg},
+  booktitle = {Proc. Eur. Conf. Comput. Vis. (ECCV)},
+  pages     = {252--269},
+  year      = {2024},
+  doi       = {10.1007/978-3-031-72980-5_15}
+}
+
+% [V]
+@inproceedings{nie2024reason2drive,
+  title     = {{Reason2Drive}: Towards Interpretable and Chain-Based Reasoning for Autonomous Driving},
+  author    = {Nie, Ming and Peng, Renyuan and Wang, Chunwei and Cai, Xinyue and Han, Jianhua and Xu, Hang and Zhang, Li},
+  booktitle = {Proc. Eur. Conf. Comput. Vis. (ECCV)},
+  pages     = {292--308},
+  year      = {2024},
+  doi       = {10.1007/978-3-031-73347-5_17}
+}
+
+% [V]
+@inproceedings{arai2025covla,
+  title     = {{CoVLA}: Comprehensive Vision-Language-Action Dataset for Autonomous Driving},
+  author    = {Arai, Hidehisa and Miwa, Keita and Sasaki, Kento and Watanabe, Kohei and Yamaguchi, Yu and Aoki, Shunsuke and Yamamoto, Issei},
+  booktitle = {Proc. IEEE/CVF Winter Conf. Appl. Comput. Vis. (WACV)},
+  pages     = {1933--1943},
+  year      = {2025},
+  doi       = {10.1109/WACV61041.2025.00195}
+}
+
+% [V] ICCV 2025
+@inproceedings{xie2025drivebench,
+  title     = {Are {VLMs} Ready for Autonomous Driving? An Empirical Study from the Reliability, Data, and Metric Perspectives},
+  author    = {Xie, Shaoyuan and Kong, Lingdong and Dong, Yuhao and Sima, Chonghao and Zhang, Wenwei and Chen, Qi Alfred and Liu, Ziwei and Pan, Liang},
+  booktitle = {Proc. IEEE/CVF Int. Conf. Comput. Vis. (ICCV)},
+  year      = {2025}
+}
+
+% [V] published version verified 2026-11-27
+@inproceedings{chi2025impromptu,
+  title     = {{Impromptu VLA}: Open Weights and Open Data for Driving Vision-Language-Action Models},
+  author    = {Chi, Haohan and Gao, Huan-ang and Liu, Ziming and Liu, Jianing and Liu, Chenyu and Li, Jinwei and Yang, Kaisen and Yu, Yangcheng and Wang, Zeda and Li, Wenyi and others},
+  booktitle = {Adv. Neural Inf. Process. Syst. (NeurIPS) Datasets and Benchmarks Track},
+  year      = {2025}
+}
+
+% ---------------------------------------------------------------------
+% VLM4AD: understanding, QA, explanation, language-guided driving
+% ---------------------------------------------------------------------
+
+% [V]
+@article{xu2024drivegpt4,
+  title   = {{DriveGPT4}: Interpretable End-to-End Autonomous Driving Via Large Language Model},
+  author  = {Xu, Zhenhua and Zhang, Yujia and Xie, Enze and Zhao, Zhen and Guo, Yong and Wong, Kwan-Yee K. and Li, Zhenguo and Zhao, Hengshuang},
+  journal = {IEEE Robot. Autom. Lett.},
+  volume  = {9},
+  number  = {10},
+  pages   = {8186--8193},
+  year    = {2024},
+  doi     = {10.1109/LRA.2024.3440097}
+}
+
+% [V]
+@inproceedings{sima2024drivelm,
+  title     = {{DriveLM}: Driving with Graph Visual Question Answering},
+  author    = {Sima, Chonghao and Renz, Katrin and Chitta, Kashyap and Chen, Li and Zhang, Hanxue and Xie, Chengen and Bei{\ss}wenger, Jens and Luo, Ping and Geiger, Andreas and Li, Hongyang},
+  booktitle = {Proc. Eur. Conf. Comput. Vis. (ECCV)},
+  pages     = {256--274},
+  year      = {2024},
+  doi       = {10.1007/978-3-031-72943-0_15}
+}
+
+% [V]
+@inproceedings{tian2024drivevlm,
+  title     = {{DriveVLM}: The Convergence of Autonomous Driving and Large Vision-Language Models},
+  author    = {Tian, Xiaoyu and Gu, Junru and Li, Bailin and Liu, Yicheng and Wang, Yang and Zhao, Zhiyong and Zhan, Kun and Jia, Peng and Lang, XianPeng and Zhao, Hang},
+  booktitle = {Proc. Conf. Robot Learn. (CoRL)},
+  volume    = {270},
+  pages     = {4698--4726},
+  year      = {2025}
+}
+
+% [V]
+@inproceedings{shao2024lmdrive,
+  title     = {{LMDrive}: Closed-Loop End-to-End Driving with Large Language Models},
+  author    = {Shao, Hao and Hu, Yuxuan and Wang, Letian and Song, Guanglu and Waslander, Steven L. and Liu, Yu and Li, Hongsheng},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)},
+  pages     = {15120--15130},
+  year      = {2024},
+  doi       = {10.1109/CVPR52733.2024.01432}
+}
+
+% [V]
+@inproceedings{mao2023gptdriver,
+  title     = {{GPT-Driver}: Learning to Drive with {GPT}},
+  author    = {Mao, Jiageng and Qian, Yuxi and Ye, Junjie and Zhao, Hang and Wang, Yue},
+  booktitle = {NeurIPS Workshop Found. Models Decis. Mak.},
+  year      = {2023}
+}
+
+% [V]
+@inproceedings{mao2024agentdriver,
+  title     = {A Language Agent for Autonomous Driving},
+  author    = {Mao, Jiageng and Ye, Junjie and Qian, Yuxi and Pavone, Marco and Wang, Yue},
+  booktitle = {Proc. Conf. Lang. Model. (COLM)},
+  year      = {2024}
+}
+
+% [V]
+@article{sha2023languagempc,
+  title   = {{LanguageMPC}: Large Language Models as Decision Makers for Autonomous Driving},
+  author  = {Sha, Hao and Mu, Yao and Jiang, Yuxuan and Chen, Li and Xu, Chenfeng and Luo, Ping and Li, Shengbo Eben and Tomizuka, Masayoshi and Zhan, Wei and Ding, Mingyu},
+  journal = {arXiv preprint arXiv:2310.03026},
+  year    = {2023}
+}
+
+% [V] published version verified 2026-11-27
+@article{wang2023drivemlm,
+  title   = {{DriveMLM}: Aligning Multi-Modal Large Language Models with Behavioral Planning States for Autonomous Driving},
+  author  = {Cui, Erfei and Wang, Wenhai and Li, Zhiqi and Xie, Jiangwei and Zou, Haoming and Deng, Hanming and Luo, Gen and Lu, Lewei and Zhu, Xizhou and Dai, Jifeng},
+  journal = {Vis. Intell.},
+  volume  = {3},
+  pages   = {22},
+  year    = {2025}
+}
+
+% [V]
+@inproceedings{ma2024dolphins,
+  title     = {Dolphins: Multimodal Language Model for Driving},
+  author    = {Ma, Yingzi and Cao, Yulong and Sun, Jiachen and Pavone, Marco and Xiao, Chaowei},
+  booktitle = {Proc. Eur. Conf. Comput. Vis. (ECCV)},
+  pages     = {403--420},
+  year      = {2024},
+  doi       = {10.1007/978-3-031-72995-9_23}
+}
+
+% [V]
+@inproceedings{zhou2024elm,
+  title     = {Embodied Understanding of Driving Scenarios},
+  author    = {Zhou, Yunsong and Huang, Linyan and Bu, Qingwen and Zeng, Jia and Li, Tianyu and Qiu, Hang and Zhu, Hongzi and Guo, Minyi and Qiao, Yu and Li, Hongyang},
+  booktitle = {Proc. Eur. Conf. Comput. Vis. (ECCV)},
+  pages     = {129--148},
+  year      = {2024},
+  doi       = {10.1007/978-3-031-73033-7_8}
+}
+
+% [V]
+@inproceedings{pan2024vlp,
+  title     = {{VLP}: Vision Language Planning for Autonomous Driving},
+  author    = {Pan, Chenbin and Yaman, Burhaneddin and Nesti, Tommaso and Mallik, Abhirup and Allievi, Alessandro G. and Velipasalar, Senem and Ren, Liu},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)},
+  pages     = {14760--14769},
+  year      = {2024},
+  doi       = {10.1109/CVPR52733.2024.01398}
+}
+
+% [V]
+@inproceedings{yuan2024ragdriver,
+  title     = {{RAG-Driver}: Generalisable Driving Explanations with Retrieval-Augmented In-Context Multi-Modal Large Language Model Learning},
+  author    = {Yuan, Jianhao and Sun, Shuyang and Omeiza, Daniel and Zhao, Bo and Newman, Paul and Kunze, Lars and Gadd, Matthew},
+  booktitle = {Proc. Robot.: Sci. Syst. (RSS)},
+  year      = {2024},
+  doi       = {10.15607/RSS.2024.XX.075}
+}
+
+% [V]
+@inproceedings{wang2025omnidrive,
+  title     = {{OmniDrive}: A Holistic Vision-Language Dataset for Autonomous Driving with Counterfactual Reasoning},
+  author    = {Wang, Shihao and Yu, Zhiding and Jiang, Xiaohui and Lan, Shiyi and Shi, Min and Chang, Nadine and Kautz, Jan and Li, Ying and Alvarez, Jose M.},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)},
+  pages     = {22442--22452},
+  year      = {2025},
+  doi       = {10.1109/CVPR52734.2025.02090}
+}
+
+% [V] Published in IJCV 2026 (updated from arXiv:2410.22313)
+@article{jiang2024senna,
+  title   = {Senna: Bridging Large Vision-Language Models and End-to-End Autonomous Driving},
+  author  = {Jiang, Bo and Chen, Shaoyu and Liao, Bencheng and Zhang, Xingyu and Yin, Wei and Zhang, Qian and Huang, Chang and Liu, Wenyu and Wang, Xinggang},
+  journal = {Int. J. Comput. Vis.},
+  volume  = {134},
+  pages   = {407},
+  doi     = {10.1007/s11263-026-03002-y},
+  year    = {2026}
+}
+
+% ---------------------------------------------------------------------
+% VLA4AD: unified / action-expert models
+% ---------------------------------------------------------------------
+
+% [V][P] arXiv:2410.23262 (v3, Sep 2025) -- check for journal version
+@article{hwang2024emma,
+  title   = {{EMMA}: End-to-End Multimodal Model for Autonomous Driving},
+  author  = {Hwang, Jyh-Jing and Xu, Runsheng and Lin, Hubert and Hung, Wei-Chih and Ji, Jingwei and Choi, Kristy and Huang, Di and He, Tong and Covington, Paul and Sapp, Benjamin and Zhou, Yin and Guo, James and Anguelov, Dragomir and Tan, Mingxing},
+  journal = {arXiv preprint arXiv:2410.23262},
+  year    = {2024}
+}
+
+% [V]
+@inproceedings{xing2025openemma,
+  title     = {{OpenEMMA}: Open-Source Multimodal Model for End-to-End Autonomous Driving},
+  author    = {Xing, Shuo and Qian, Chengyuan and Wang, Yuping and Hua, Hongyuan and Tian, Kexin and Zhou, Yang and Tu, Zhengzhong},
+  booktitle = {Proc. IEEE/CVF Winter Conf. Appl. Comput. Vis. Workshops (WACVW)},
+  pages     = {1001--1009},
+  year      = {2025},
+  doi       = {10.1109/WACVW65960.2025.00113}
+}
+
+% [V]
+@inproceedings{renz2025simlingo,
+  title     = {{SimLingo}: Vision-Only Closed-Loop Autonomous Driving with Language-Action Alignment},
+  author    = {Renz, Katrin and Chen, Long and Arani, Elahe and Sinavski, Oleg},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)},
+  pages     = {11993--12003},
+  year      = {2025},
+  doi       = {10.1109/CVPR52734.2025.01120}
+}
+
+% [V]
+@inproceedings{fu2025orion,
+  title     = {{ORION}: A Holistic End-to-End Autonomous Driving Framework by Vision-Language Instructed Action Generation},
+  author    = {Fu, Haoyu and Zhang, Diankun and Zhao, Zongchuang and Cui, Jianfeng and Liang, Dingkang and others},
+  booktitle = {Proc. IEEE/CVF Int. Conf. Comput. Vis. (ICCV)},
+  year      = {2025}
+}
+
+% [V]
+@inproceedings{zhou2025autovla,
+  title     = {{AutoVLA}: A Vision-Language-Action Model for End-to-End Autonomous Driving with Adaptive Reasoning and Reinforcement Fine-Tuning},
+  author    = {Zhou, Zewei and Cai, Tianhui and Zhao, Seth Z. and Zhang, Yun and Huang, Zhiyu and Zhou, Bolei and Ma, Jiaqi},
+  booktitle = {Adv. Neural Inf. Process. Syst. (NeurIPS)},
+  year      = {2025}
+}
+
+% [V] Published in AAAI 2026 (updated from arXiv:2503.23463)
+@inproceedings{zhou2025opendrivevla,
+  title     = {{OpenDriveVLA}: Towards End-to-End Autonomous Driving with Large Vision Language Action Model},
+  author    = {Zhou, Xingcheng and Han, Xuyuan and Yang, Feng and Ma, Yunpu and Tresp, Volker and Knoll, Alois C.},
+  booktitle = {Proc. AAAI Conf. Artif. Intell. (AAAI)},
+  volume    = {40},
+  number    = {16},
+  pages     = {13782--13790},
+  doi       = {10.1609/aaai.v40i16.38386},
+  year      = {2026}
+}
+
+% [V]
+@article{jiang2025diffvla,
+  title   = {{DiffVLA}: Vision-Language Guided Diffusion Planning for Autonomous Driving},
+  author  = {Jiang, Anqing and Gao, Yu and Sun, Zhigang and Wang, Yiru and Wang, Jijun and Chai, Jinghao and Cao, Qian and Heng, Yuweng and Jiang, Hao and Dong, Yunda and Zongzheng Zhang and Xianda Guo and Hao Sun and Hao Zhao},
+  journal = {arXiv preprint arXiv:2505.19381},
+  year    = {2025}
+}
+
+% [V][P]
+% [V] ICLR 2026 (iclr.cc poster page, mlanthology)
+@inproceedings{li2025recogdrive,
+  title     = {{ReCogDrive}: A Reinforced Cognitive Framework for End-to-End Autonomous Driving},
+  author    = {Li, Yongkang and Xiong, Kaixin and Guo, Xiangyu and Li, Fang and Yan, Sixu and Xu, Gangwei and Zhou, Lijun and Chen, Long and Sun, Haiyang and Wang, Bing and Ma, Kun and Chen, Guang and Ye, Hangjun and Liu, Wenyu and Wang, Xinggang},
+  booktitle = {Proc. Int. Conf. Learn. Represent. (ICLR)},
+  year      = {2026}
+}
+
+% [V]
+@article{jiang2025alphadrive,
+  title   = {{AlphaDrive}: Unleashing the Power of {VLMs} in Autonomous Driving via Reinforcement Learning and Reasoning},
+  author  = {Jiang, Bo and Chen, Shaoyu and Zhang, Qian and Liu, Wenyu and Wang, Xinggang},
+  journal = {arXiv preprint arXiv:2503.07608},
+  year    = {2025}
+}
+
+% [V]
+@inproceedings{zeng2025fsdrive,
+  title     = {{FutureSightDrive}: Thinking Visually with Spatio-Temporal {CoT} for Autonomous Driving},
+  author    = {Zeng, Shuang and Chang, Xinyuan and Xie, Mengwei and Liu, Xinran and Bai, Yifan and Pan, Zheng and Xu, Mu and Wei, Xing},
+  booktitle = {Adv. Neural Inf. Process. Syst. (NeurIPS)},
+  year      = {2025}
+}
+
+% [V][P] arXiv:2511.00088 (v2 Jan 2026); a.k.a. Alpamayo 1
+@article{nvidia2025alpamayor1,
+  title   = {{Alpamayo-R1}: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail},
+  author  = {{NVIDIA} and Wang, Yan and Luo, Wenjie and Bai, Junjie and Cao, Yulong and others},
+  journal = {arXiv preprint arXiv:2511.00088},
+  year    = {2025}
+}
+
+% [V]
+@inproceedings{li2026drivevlaw0,
+  title     = {{DriveVLA-W0}: World Models Amplify Data Scaling Law in Autonomous Driving},
+  author    = {Li, Yingyan and Shang, Shuyao and Liu, Weisong and Zhan, Bing and Wang, Haochen and Wang, Yuqi and Chen, Yuntao and Wang, Xiaoman and An, Yasong and Tang, Chufeng and Hou, Lu and Fan, Lue and Zhang, Zhaoxiang},
+  booktitle = {Proc. Int. Conf. Learn. Represent. (ICLR)},
+  year      = {2026}
+}
+
+% [V]
+@inproceedings{rawal2026nord,
+  title     = {{NoRD}: A Data-Efficient Vision-Language-Action Model that Drives without Reasoning},
+  author    = {Rawal, Ishaan and Gupta, Shubh and Hu, Yihan and Zhan, Wei},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)},
+  year      = {2026}
+}
+
+% [V][P]
+@article{chen2026curiousvla,
+  title   = {Devil is in Narrow Policy: Unleashing Exploration in Driving {VLA} Models},
+  author  = {Chen, Canyu and Yang, Yuguang and Tan, Zhewen and Wang, Yizhi and Zhan, Ruiyi and others},
+  journal = {arXiv preprint arXiv:2603.06049},
+  note    = {Accepted to CVPR 2026 Findings},
+  year    = {2026}
+}
+
+% [V][P] check 3rd author spelling (Xuewei Qi?)
+@article{zhou2026spanvla,
+  title   = {{SpanVLA}: Efficient Action Bridging and Learning from Negative-Recovery Samples for Vision-Language-Action Model},
+  author  = {Zhou, Zewei and Yang, Ruining and others},
+  journal = {arXiv preprint arXiv:2604.19710},
+  year    = {2026}
+}
+
+% [V][P]
+@article{tian2026safealign,
+  title   = {{SafeAlign-VLA}: A Negative-Enhanced Safe Alignment Framework for Risk-Aware Autonomous Driving},
+  author  = {Tian, Kefei and Lian, Yuansheng and Yang, Kai and Chen, Xiangdong and Li, Shen},
+  journal = {arXiv preprint arXiv:2605.19524},
+  year    = {2026}
+}
+
+% ---------------------------------------------------------------------
+% Reasoning representations: latent / world-model-coupled
+% ---------------------------------------------------------------------
+
+% [V] CVPR 2026 (CVF Open Access)
+@inproceedings{tan2025lcdrive,
+  title     = {Latent Chain-of-Thought World Modeling for End-to-End Driving},
+  author    = {Tan, Shuhan and Chitta, Kashyap and Chen, Yuxiao and Tian, Ran and You, Yurong and Wang, Yan and Luo, Wenjie and Cao, Yulong and Kr{\"a}henb{\"u}hl, Philipp and Pavone, Marco and Ivanovic, Boris},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)},
+  year      = {2026}
+}
+
+% [V][P]
+@article{xiaomi2026onevl,
+  title   = {{OneVL}: One-Step Latent Reasoning and Planning with Vision-Language Explanation},
+  author  = {{Xiaomi Embodied Intelligence Team}},
+  journal = {arXiv preprint arXiv:2604.18486},
+  year    = {2026}
+}
+
+% [V][P]
+@article{jia2026driveworldvla,
+  title   = {{DriveWorld-VLA}: Unified Latent-Space World Modeling with Vision-Language-Action for Autonomous Driving},
+  author  = {Jia, Feiyang and Liu, Lin and Song, Ziying and Jia, Caiyan and Ye, Hangjun and Hao, Xiaoshuai and Chen, Long},
+  journal = {arXiv preprint arXiv:2602.06521},
+  year    = {2026}
+}
+
+% [V][P]
+@article{liu2026uniworldvla,
+  title   = {{Uni-World VLA}: Interleaved World Modeling and Planning for Autonomous Driving},
+  author  = {Liu, Qiqi and Xu, Huan and Li, Jingyu and Sun, Bin and Hao, Zhihui and She, Dangen and Zhu, Xiatian and Zhang, Li},
+  journal = {arXiv preprint arXiv:2603.27287},
+  year    = {2026}
+}
+
+% [V] CVPR 2026 Findings (verified 2026-11-27)
+@inproceedings{wang2026vlaworld,
+  title   = {Learning Vision-Language-Action World Models for Autonomous Driving},
+  author  = {Wang, Guoqing and Tang, Pin and Ren, Xiangxuan and Zhao, Guodongfang and Feng, Bailan and Ma, Chao},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR) Findings},
+  year    = {2026}
+}
+
+% [V] ECCV 2026 (DOI supplied by author)
+@inproceedings{sheng2026explorevla,
+  title     = {{ExploreVLA}: Dense World Modeling and Exploration for End-to-End Autonomous Driving},
+  author    = {Sheng, Zihao and Ye, Xin and Luo, Jingru and Chen, Sikai and Ren, Liu},
+  booktitle = {Proc. Eur. Conf. Comput. Vis. (ECCV)},
+  doi       = {10.1007/978-3-032-37261-1_16},
+  year      = {2026}
+}
+
+% [V][P]
+@article{dinh2026specdecode,
+  title   = {Reasoning-aware Speculative Decoding for Efficient Vision-Language-Action Models in Autonomous Driving},
+  author  = {Dinh, Anh Dung and Khan, Simon and Salim, Flora},
+  journal = {arXiv preprint arXiv:2606.31160},
+  year    = {2026}
+}
+
+% ---------------------------------------------------------------------
+% Safety / robustness
+% ---------------------------------------------------------------------
+
+% [V][P]
+@article{chung2024typographic,
+  title   = {Towards Transferable Attacks Against Vision-{LLMs} in Autonomous Driving with Typography},
+  author  = {Chung, Nhat and Gao, Sensen and Vu, Tuan-Anh and Zhang, Jie and Liu, Aishan and Lin, Yun and Dong, Jin Song and Guo, Qing},
+  journal = {arXiv preprint arXiv:2405.14169},
+  year    = {2024}
+}
+
+% ---------------------------------------------------------------------
+% Industry systems (non-archival; cite sparingly, Sec. 9)
+% ---------------------------------------------------------------------
+
+% [V]
+@misc{liauto2025mindvla,
+  title        = {{VLA}: A Critical Step Toward Autonomous Driving Physical Agents},
+  author       = {Jia, Peng},
+  howpublished = {{NVIDIA} {GTC} 2025, Session {S72557}},
+  year         = {2025},
+  url          = {https://www.nvidia.cn/on-demand/session/gtc25-s72557/},
+  note         = {English translation of the session title. Accessed: Nov. 2026}
+}
+
+% [V]
+@misc{nvidia2026alpamayo15,
+  title        = {{Alpamayo-1.5-10B} Model Card},
+  author       = {{NVIDIA}},
+  howpublished = {Hugging Face model card},
+  year         = {2026},
+  url          = {https://huggingface.co/nvidia/Alpamayo-1.5-10B},
+  note         = {Accessed: Nov. 2026}
+}
+
+% ---------------------------------------------------------------------
+% Added in Phase 2 (all checked online 2026-11-18)
+% ---------------------------------------------------------------------
+
+% [V][P] 1st place, 2025 Waymo Vision-Based E2E Driving Challenge
+@article{rowe2025poutine,
+  title   = {Poutine: Vision-Language-Trajectory Pre-Training and Reinforcement Learning Post-Training Enable Robust End-to-End Autonomous Driving},
+  author  = {Rowe, Luke and de Schaetzen, Rodrigue and Girgis, Roger and Pal, Christopher and Paull, Liam},
+  journal = {arXiv preprint arXiv:2506.11234},
+  year    = {2025}
+}
+
+% [V][P] 2nd place, 2025 Waymo Vision-Based E2E Driving Challenge
+@article{wang2025hmvlm,
+  title   = {{HMVLM}: Multistage Reasoning-Enhanced Vision-Language Model for Long-Tailed Driving Scenarios},
+  author  = {Wang, Daming and Song, Yuhao and He, Zijian and Chen, Kangliang and Pan, Xing and Deng, Lu and Gu, Weihao},
+  journal = {arXiv preprint arXiv:2506.05883},
+  year    = {2025}
+}
+
+% [V][P]
+@article{luo2025adathinkdrive,
+  title   = {{AdaThinkDrive}: Adaptive Thinking via Reinforcement Learning for Autonomous Driving},
+  author  = {Luo, Yuechen and Li, Fang and Xu, Shaoqing and Lai, Zhiyi and Yang, Lei and Chen, Qimao and Luo, Ziang and Xie, Zixun and Jiang, Shengyin and Liu, Jiaxin and Chen, Long and Wang, Bing and Yang, Zhi-Xin},
+  journal = {arXiv preprint arXiv:2509.13769},
+  year    = {2025}
+}
+
+% [V] ECCV 2026 (pp. 503-522, cited as published)
+@inproceedings{fu2025minddrive,
+  title     = {{MindDrive}: A Vision-Language-Action Model for Autonomous Driving via Online Reinforcement Learning},
+  author    = {Fu, Haoyu and Zhang, Diankun and Zhao, Zongchuang and Cui, Jianfeng and Xie, Hongwei and Wang, Bing and Chen, Guang and Ye, Hangjun and Liang, Dingkang and Bai, Xiang},
+  booktitle = {Proc. Eur. Conf. Comput. Vis. (ECCV)},
+  pages     = {503--522},
+  year      = {2026}
+}
+
+% [V][P]
+@article{jiang2025irlvla,
+  title   = {{IRL-VLA}: Training a Vision-Language-Action Policy via Reward World Model for End-to-End Autonomous Driving},
+  author  = {Jiang, Anqing and Heng, Yuwen and Gao, Yu and Sun, Hao and Wang, Jijun and Wang, Yiru and Tang, Shichen and Gu, Zichong and Sun, Li and Sun, Zhigang and Zhu, Lijuan and Jiang, Hao and Wang, Shuo and Chai, Jinhao},
+  journal = {arXiv preprint arXiv:2508.06571},
+  year    = {2025}
+}
+
+% [V]
+@inproceedings{guo2025surds,
+  title     = {{SURDS}: Benchmarking Spatial Understanding and Reasoning in Driving Scenarios with Vision Language Models},
+  author    = {Guo, Xianda and Zhang, Ruijun and Duan, Yiqun and He, Yuhang and Nie, Dujun and Huang, Wenke and Zhang, Chenming and Liu, Shuai and Zhao, Hao and Chen, Long},
+  booktitle = {Adv. Neural Inf. Process. Syst. (NeurIPS)},
+  year      = {2025}
+}
+
+% [V][P]
+@article{guo2024drivemllm,
+  title   = {{DriveMLLM}: A Benchmark for Spatial Understanding with Multimodal Large Language Models in Autonomous Driving},
+  author  = {Guo, Xianda and Zhang, Ruijun and Duan, Yiqun and He, Yuhang and Zhang, Chenming and Liu, Shuai and Chen, Long},
+  journal = {arXiv preprint arXiv:2411.13112},
+  year    = {2024}
+}
+
+% [V]
+@inproceedings{ishaq2025drivelmmo1,
+  title     = {{DriveLMM-o1}: A Step-by-Step Reasoning Dataset and Large Multimodal Model for Driving Scenario Understanding},
+  author    = {Ishaq, Ayesha and Lahoud, Jean and More, Ketan and Thawakar, Omkar and Thawkar, Ritesh and Dissanayake, Dinura and Ahsan, Noor and Li, Yuhao and Khan, Fahad Shahbaz and Cholakkal, Hisham and Laptev, Ivan and Anwer, Rao Muhammad and Khan, Salman},
+  booktitle = {Proc. IEEE/RSJ Int. Conf. Intell. Robots Syst. (IROS)},
+  pages     = {20501--20508},
+  year      = {2025}
+}
+
+% [V][P]
+@article{you2024v2xvlm,
+  title   = {{V2X-VLM}: End-to-End {V2X} Cooperative Autonomous Driving Through Large Vision-Language Models},
+  author  = {You, Junwei and Shi, Haotian and Jiang, Zhuoyu and Huang, Zilin and Gan, Rui and Wu, Keshu and Cheng, Xi and Li, Xiaopeng and Ran, Bin},
+  journal = {arXiv preprint arXiv:2408.09251},
+  year    = {2024}
+}
+
+% [V]
+@inproceedings{xiong2026prune2drive,
+  title     = {{Prune2Drive}: A Plug-and-Play Framework for Accelerating Vision-Language Models in Autonomous Driving},
+  author    = {Xiong, Minhao and Wen, Zichen and Gu, Zhuangcheng and Liu, Xuyang and Zhang, Rui and Kang, Hengrui and Yang, Jiabing and Zhang, Junyuan and Li, Weijia and He, Conghui and Zhang, Linfeng},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)},
+  year      = {2026}
+}
+
+% [V][P]
+@article{sha2026stprune,
+  title   = {{ST-Prune}: Training-Free Spatio-Temporal Token Pruning for Vision-Language Models in Autonomous Driving},
+  author  = {Sha, Lin and Guo, Haiyun and Wang, Tao and Zhang, Cong and Huang, Min and Wang, Jinqiao and Miao, Qinghai},
+  journal = {arXiv preprint arXiv:2604.19145},
+  year    = {2026}
+}
+
+% [V]
+@misc{waymo2025foundation,
+  title        = {Demonstrably Safe {AI} for Autonomous Driving},
+  author       = {{Waymo AI Team}},
+  howpublished = {Waymo blog},
+  year         = {2025},
+  url          = {https://waymo.com/blog/2025/12/demonstrably-safe-ai-for-autonomous-driving/},
+  note         = {Accessed: Nov. 2026}
+}
+
+% [V]
+@misc{waymo2026lessons,
+  title        = {10 {AI} Lessons from Driving 200+ Million Fully Autonomous Miles},
+  author       = {Thirumalai, Srikanth},
+  howpublished = {Waymo blog},
+  year         = {2026},
+  url          = {https://waymo.com/blog/2026/08/10ailessons/},
+  note         = {Accessed: Nov. 2026}
+}
+
+% [V] English translation of the March 5, 2026 Dutch press release title
+@misc{xpeng2026vla2,
+  title        = {{XPENG} Positions Itself as the {AI} Architect of Next-Generation Mobility},
+  author       = {{XPENG}},
+  howpublished = {{XPENG} press release},
+  month        = mar,
+  year         = {2026},
+  url          = {https://www.xpeng.com/pressroom/news/019cbe9858249c0960ee8a02812901c5},
+  note         = {March 5, 2026. Title translated from Dutch. Accessed: Nov. 2026}
+}
+
+% ---------------------------------------------------------------------
+% Added in Phase 3 (all checked online 2026-11-18)
+% ---------------------------------------------------------------------
+
+% [V][P]
+@article{bai2024atlas,
+  title   = {Is a {3D}-Tokenized {LLM} the Key to Reliable Autonomous Driving?},
+  author  = {Bai, Yifan and Wu, Dongming and Liu, Yingfei and Jia, Fan and Mao, Weixin and Zhang, Ziheng and Zhao, Yucheng and Shen, Jianbing and Wei, Xing and Wang, Tiancai and Zhang, Xiangyu},
+  journal = {arXiv preprint arXiv:2405.18361},
+  year    = {2024}
+}
+
+% [V][P]
+@article{wei2025lvldrive,
+  title   = {Spatial-aware Vision Language Model for Autonomous Driving},
+  author  = {Wei, Weijie and Luo, Zhipeng and Feng, Ling and Liong, Venice Erin},
+  journal = {arXiv preprint arXiv:2512.24331},
+  year    = {2025}
+}
+
+% [V][P]
+@article{vo2026drivespatial,
+  title   = {{DriveSpatial}: A Benchmark for Spatiotemporal Intelligence in {VLMs} for Autonomous Driving},
+  author  = {Vo, Hao and Vo, Khoa and Nguyen, Phu Loc and Tran, Sieu and Nguyen, Duc Minh and Cuong, Ngo Xuan and others},
+  journal = {arXiv preprint arXiv:2605.23176},
+  year    = {2026}
+}
+
+% [V] ICML 2026 (arXiv:2512.05277); confirm final author list
+@inproceedings{cannons2026tad,
+  title     = {From Segments to Scenes: Temporal Understanding for Agentic Autonomous Driving via Vision-Language Models},
+  author    = {Cannons, Kevin and Alvar, Saeed Ranjbar and Hossain, Mohammad Asiful and Rezaei, Ahmad and Gholami, Mohsen and Heidarikhazaei, Alireza and Weimin, Zhou and Zhang, Yong and Akbari, Mohammad and others},
+  booktitle = {Proc. Int. Conf. Mach. Learn. (ICML)},
+  year      = {2026}
+}
+
+% [V][P]
+@article{zeng2025dvbench,
+  title   = {Are Vision {LLMs} Road-Ready? {A} Comprehensive Benchmark for Safety-Critical Driving Video Understanding},
+  author  = {Zeng, Tong and Wu, Longfeng and Shi, Liang and Zhou, Dawei and Guo, Feng},
+  journal = {arXiv preprint arXiv:2504.14526},
+  year    = {2025}
+}
+
+% [V][P]
+@article{chiu2025v2vllm,
+  title   = {{V2V-LLM}: Vehicle-to-Vehicle Cooperative Autonomous Driving with Multi-Modal Large Language Models},
+  author  = {Chiu, Hsu-kuang and Hachiuma, Ryo and Wang, Chien-Yi and Smith, Stephen F. and Wang, Yu-Chiang Frank and Chen, Min-Hung},
+  journal = {arXiv preprint arXiv:2502.09980},
+  year    = {2025}
+}
+
+% [V]
+@inproceedings{hegde2025dima,
+  title     = {Distilling Multi-modal Large Language Models for Autonomous Driving},
+  author    = {Hegde, Deepti and Yasarla, Rajeev and Cai, Hong and Han, Shizhong and Bhattacharyya, Apratim and Mahajan, Shweta and Liu, Litian and Garrepalli, Risheek and Patel, Vishal M. and Porikli, Fatih},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)},
+  pages     = {27575--27585},
+  year      = {2025}
+}
+
+% [V][P]
+@article{ang2026dualdrivevla,
+  title   = {From Representational Complementarity to Dual Systems: Synergizing {VLM} and Vision-Only Backbones for End-to-End Driving},
+  author  = {Ang, Sining and Yang, Yuguang and Dang, Chenxu and Chen, Canyu and Chi, Cheng and Liu, Haiyan and Mao, Xuanyao and Bao, Jason and Xuliang and Sun, Bingchuan and Wang, Yan},
+  journal = {arXiv preprint arXiv:2602.10719},
+  year    = {2026}
+}
+
+% [V] ITSC 2024 (supplied by author)
+@inproceedings{cui2023talk2drive,
+  title     = {Personalized Autonomous Driving with Large Language Models: Field Experiments},
+  author    = {Cui, Can and Yang, Zichong and Zhou, Yupeng and Ma, Yunsheng and Lu, Juanwu and Li, Lingxi and Chen, Yaobin and Panchal, Jitesh and Wang, Ziran},
+  booktitle = {Proc. IEEE Int. Conf. Intell. Transp. Syst. (ITSC)},
+  year      = {2024}
+}
+
+% [V][P]
+@article{nguyen2026vladrivebench,
+  title   = {{VLADriveBench}: Evaluating {CoT}-Action Relationship in {VLA} for Autonomous Driving},
+  author  = {Nguyen, Thach and Guo, Danhua and Lampo, Tom and Wu, Fei and Yaman, Burhan},
+  journal = {arXiv preprint arXiv:2606.12706},
+  year    = {2026}
+}
+
+% [V] DriveX Workshop, CVPR 2026 (arXiv:2605.17268)
+@inproceedings{mayumu2026faithful,
+  title     = {Is {VLA} Reasoning Faithful? Probing Safety of Chain-of-Causation in Autonomous Driving Models},
+  author    = {Mayumu, Nicanor and Deng, Xiaoheng and Mukala, Patrick},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. Workshops (CVPRW)},
+  year      = {2026}
+}
+
+% [V][P]
+@article{foutter2026faithful,
+  title   = {Do Vision-Language-Action Models Mean What They Say? On the Role of Faithfulness in Embodied Reasoning},
+  author  = {Foutter, Matthew and Cercola, Matteo and Wild, Lena and Wang, Yunshan and Li, Michelle and Gammelli, Daniele and Pavone, Marco},
+  journal = {arXiv preprint arXiv:2607.04681},
+  year    = {2026}
+}
+
+% ---------------------------------------------------------------------
+% Added in Phase 4: robustness, security, safe instruction following
+% (all checked online 2026-11-18)
+% ---------------------------------------------------------------------
+
+% [V][P]
+@article{priyadershi2026lostinfog,
+  title   = {Lost in Fog: Sensor Perturbations Expose Reasoning Fragility in Driving {VLAs}},
+  author  = {Priyadershi, Abhinaw and Frtunikj, Jelena},
+  journal = {arXiv preprint arXiv:2605.21446},
+  year    = {2026}
+}
+
+% [V][P]
+@article{liao2025robodrivevlm,
+  title   = {{RoboDriveVLM}: A Novel Benchmark and Baseline towards Robust Vision-Language Models for Autonomous Driving},
+  author  = {Liao, Dacheng and Qi, Mengshi and Shu, Peng and Zhang, Zhining and Lin, Yuxin and Liu, Liang and Ma, Huadong},
+  journal = {arXiv preprint arXiv:2512.01300},
+  year    = {2025}
+}
+
+% [V][P]
+@article{mammen2026reliable,
+  title   = {Towards Reliable Vision-Language Models for Autonomous Driving},
+  author  = {Mammen, Manasa Mariam and Mammen, Priyanka Mary and Kayatas, Zafer and Wagner, Stefan},
+  journal = {arXiv preprint arXiv:2610.01531},
+  year    = {2026}
+}
+
+% [V]
+@inproceedings{sural2024contextvlm,
+  title     = {{ContextVLM}: Zero-Shot and Few-Shot Context Understanding for Autonomous Driving using Vision Language Models},
+  author    = {Sural, Shounak and Naren and Rajkumar, Ragunathan},
+  booktitle = {Proc. IEEE Int. Conf. Intell. Transp. Syst. (ITSC)},
+  pages     = {468--475},
+  year      = {2024}
+}
+
+% [V][P]
+@article{yang2026vlmcase,
+  title   = {{VLM-CASE}: Vision-Language Model Enabled Context-Adaptive Safety Envelopes for Anticipatory Safe Autonomous Driving},
+  author  = {Yang, Tianjia and Li, Ke and Qin, Ruwen and Hu, Xianbiao},
+  journal = {arXiv preprint arXiv:2607.05180},
+  year    = {2026}
+}
+
+% [V]
+@misc{wayve2024lingo2,
+  title        = {{LINGO-2}: Driving with Natural Language},
+  author       = {{Wayve}},
+  howpublished = {Wayve blog},
+  year         = {2024},
+  url          = {https://wayve.ai/thinking/lingo-2-driving-with-language/},
+  note         = {Accessed: Nov. 2026}
+}
+
+% ---------------------------------------------------------------------
+% Added in Phase 5: newest work (checked online 2026-11-19)
+% ---------------------------------------------------------------------
+
+% [V][P] survey
+@article{hu2025vlapastfuture,
+  title   = {Vision-Language-Action Models for Autonomous Driving: Past, Present, and Future},
+  author  = {Hu, Tianshuai and Liu, Xiaolu and Wang, Song and Zhu, Yiyao and Liang, Ao and Kong, Lingdong and others},
+  journal = {arXiv preprint arXiv:2512.16760},
+  year    = {2025}
+}
+
+% [V][P] survey
+@article{li2026vlasafety,
+  title   = {Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms},
+  author  = {Li, Qi and Yin, Bo and Huang, Weiqi and Liu, Ruhao and Zou, Bojun and Yu, Runpeng and Ye, Jingwen and Yu, Weihao and Wang, Xinchao},
+  journal = {arXiv preprint arXiv:2604.23775},
+  year    = {2026}
+}
+
+% [V]
+@inproceedings{li2026reflectdrive,
+  title     = {Discrete Diffusion for Reflective Vision-Language-Action Models in Autonomous Driving},
+  author    = {Li, Pengxiang and Zheng, Yinan and Wang, Yue and Wang, Huimin and Zhao, Hang and Liu, Jingjing and Zhan, Xianyuan and Zhan, Kun and Lang, Xianpeng},
+  booktitle = {Proc. Int. Conf. Learn. Represent. (ICLR)},
+  year      = {2026}
+}
+
+% [V][P]
+@article{shi2026clear,
+  title   = {{CLEAR}: Closed-Loop Reinforcement Learning at Scale for End-to-End Autonomous Driving},
+  author  = {Shi, Yunxiao and Cai, Hong and Ghavamzadeh, Mohammad and Porikli, Fatih},
+  journal = {arXiv preprint arXiv:2607.02841},
+  year    = {2026}
+}
+
+% [V][P]
+@article{yasarla2026gero,
+  title   = {Generative Scenario Rollouts for End-to-End Autonomous Driving},
+  author  = {Yasarla, Rajeev and Hegde, Deepti and Han, Shizhong and Cheng, Hsin-Pai and Shi, Yunxiao and Sadeghigooghari, Meysam and others},
+  journal = {arXiv preprint arXiv:2601.11475},
+  year    = {2026}
+}
+
+% [V][P]
+@article{jia2026bench2drivevl,
+  title   = {{Bench2Drive-VL}: Benchmarks for Closed-Loop Autonomous Driving with Vision-Language Models},
+  author  = {Jia, Xiaosong and Shao, Yuqian and Yang, Zhenjie and Li, Qifeng and Zhang, Zhiyuan and Yan, Junchi},
+  journal = {arXiv preprint arXiv:2604.01259},
+  year    = {2026}
+}
+
+% [V][P]
+@article{zhou2026qwendrive,
+  title   = {{Qwen-Drive-1.0}: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving},
+  author  = {Zhou, Xin and Zhao, Zongchuang and Yang, Zhibo and Li, Mingsheng and Zhong, Humen and others},
+  journal = {arXiv preprint arXiv:2609.00111},
+  year    = {2026}
+}
+
+% [V] NeurIPS 2026 poster page; arXiv:2603.01928
+@inproceedings{luo2026lastvla,
+  title     = {{LaST-VLA}: Thinking in Latent Spatio-Temporal Space for Vision-Language-Action in Autonomous Driving},
+  author    = {Luo, Yuechen and Li, Fang and Xu, Shaoqing and Ji, Yang and Zhang, Zehan and Wang, Bing and Shen, Yuannan and Cui, Jianwei and Chen, Long and Chen, Guang and Ye, Hangjun and Yang, Zhi-Xin and Wen, Fuxi},
+  booktitle = {Adv. Neural Inf. Process. Syst. (NeurIPS)},
+  year      = {2026}
+}
+
+% [V][P]
+@article{chen2026geovla,
+  title   = {{Geo-VLA}: Geometry-Aware Vision-Language-Action Planning via Internalization of Map Semantics},
+  author  = {Chen, Ran and Ren, Jiaxing and Zhang, Zhikun and Hou, Yunhao and Zhuo, Junbao and Zou, Bochao},
+  journal = {arXiv preprint arXiv:2608.21440},
+  year    = {2026}
+}
+
+% [V][P]
+@article{gui2026geocotdrive,
+  title   = {Explicit Geometric Chain-of-Thought for Vision-Language-Action in Autonomous Driving},
+  author  = {Gui, Xingtai and Zhou, Yucheng and Guo, Dongqian and Gong, Jiahao and Tan, Feiyang and Shen, Jianbing},
+  journal = {arXiv preprint arXiv:2610.10390},
+  year    = {2026}
+}
+
+% [V]
+@inproceedings{yang2026trajcond,
+  title     = {Learning a Trajectory-Geometric Condition from Reasoning for {VLA} Planning},
+  author    = {Yang, Yuguang and Tan, Zhewen and Chen, Canyu and Chi, Cheng and Liu, Chunyang and Sheng, Kehua and Zhang, Bo and Yang, Jinyu and Yang, Linlin and Zhang, Baochang and Wang, Yan and Cao, Xianbin},
+  booktitle = {Adv. Neural Inf. Process. Syst. (NeurIPS)},
+  year      = {2026}
+}
+
+% [V][P]
+@article{wang2026agentworld,
+  title   = {Learning Agent-Centric Vision-Language-Action World Models for Autonomous Driving},
+  author  = {Wang, Guoqing and Tang, Pin and Ren, Xiangxuan and Ma, Chao},
+  journal = {arXiv preprint arXiv:2611.22880},
+  year    = {2026}
+}
+
+% [V][P]
+@article{zhang2026geoworldad,
+  title   = {{GeoWorldAD}: Geometry World Action Model for Autonomous Driving},
+  author  = {Zhang, Songyan and Tian, Jinyuan and Li, Hanbing and Liu, Daqi and Chen, Hao and Huang, Wenhui and Li, Fang and Chen, Guang and Ye, Hangjun and Chen, Long and Yang, Kuiyuan and Lv, Chen},
+  journal = {arXiv preprint arXiv:2607.17521},
+  year    = {2026}
+}
+
+% [V][P]
+@article{dagda2026symbolic,
+  title   = {Competent Autonomous Driving Through Fine Tuning Vision Language Action Models with Symbolic Traffic Rules},
+  author  = {Dagda, Barkin and Asodia, Vinal and Sharifi, Iman and Wei, Peng and Fallah, Saber},
+  journal = {arXiv preprint arXiv:2611.20648},
+  year    = {2026}
+}
+
+% ---- Added in final pass (all [V]: arXiv abstract pages read) ----
+@article{huang2026nureasoning,
+  title   = {{nuReasoning}: A Reasoning-Centric Dataset and Benchmark for Long-Tail Autonomous Driving},
+  author  = {Huang, Zhiyu and Liu, Johnson and Song, Rui and Qi, Tony Xuewei and Guo, Yiluan and Zhou, Zewei and others},
+  journal = {arXiv preprint arXiv:2605.31572},
+  year    = {2026}
+}
+
+% [V]
+@article{chembu2026causaldrivebench,
+  title   = {{CausalDriveBench}: Evaluating Causal Reasoning in Vision-Language-Action Models for Autonomous Driving},
+  author  = {Chembu, Narendiran and Rao, Navvrat and Kodate, Shreedhar Shreeshail and Banda, Gayatri Srujana and Sarkar, Arko and Abhinav Khanna and Rajarshee Das and Umesh Kanala and Siddarth Khandelwal and Kumar Aman and Aish Dubey and Kaustubh Beedkar and Arjun Jain},
+  journal = {arXiv preprint arXiv:2609.32157},
+  year    = {2026}
+}
+
+% [V]
+@article{kim2026odyssey,
+  title   = {Odyssey: A Closed-Loop Benchmark for Long-Horizon Real-World Driving with Explicit Navigation Routes},
+  author  = {Kim, Jungho and Shin, Hongjae and Yu, Seunghoon and Yoo, Heecheol and Kim, Myeongjun and Jiyong Oh and Donghyuk Kwak and Seunghyeop Nam and Haesung Oh and Hyunju Kim and Hyungchan Cho and Jaehyun Park and Soo Won Seo and Jun Won Choi},
+  journal = {arXiv preprint arXiv:2610.06469},
+  year    = {2026}
+}
+
+% [V]
+@article{yan2026admemo,
+  title   = {Vision-Language-Action Autonomous Driving Agent with Language-based Memory},
+  author  = {Yan, Kai and Chen, Xiangyu and Cao, Yulong and Naumann, Alex and Karkus, Peter and Yan Wang and Jef Packer and Alex Schwing and Yuxiong Wang and Boris Ivanovic and Wenjie Luo and Marco Pavone},
+  journal = {arXiv preprint arXiv:2609.38641},
+  year    = {2026}
+}
+
+% [V] EMNLP 2026 (ACL Anthology, verified 2026-11-27)
+@inproceedings{ling2026blue,
+  title     = {{BLUE}: Toward Better Language Use in Efficient Vision-Language-Action Models for Autonomous Driving},
+  author    = {Ling, George and Yang, Lijin and Yang, Hao and Huang, Zhongzhan},
+  booktitle = {Proc. Conf. Empirical Methods Nat. Lang. Process. (EMNLP)},
+  pages     = {43156--43185},
+  doi       = {10.18653/2026.emnlp-main.1894},
+  year      = {2026}
+}
+
+% [V]
+@article{yu2026s2vla,
+  title   = {{S$^2$-VLA}: Decoupling Semantic and Spatial Streams in Vision-Language-Action Models for Autonomous Driving},
+  author  = {Yu, Jianguo and Wang, Rukang and Chu, Duanfeng and Wang, Chen and Feng, Renju and Lu, Liping},
+  journal = {arXiv preprint arXiv:2607.13926},
+  year    = {2026}
+}
+
+@misc{singh2026pixels,
+  author       = {Singh, Binay Kumar and Lobo, Niels Da Vitoria},
+  title        = {From Pixels to Actions: A Comprehensive Review of Spatiotemporal Understanding from Visual Perception to Vision-Language-Action Models},
+  howpublished = {Preprints.org},
+  note         = {doi: 10.20944/preprints202611.2452.v1},
+  year         = {2026}
+  
+}
+
+@inproceedings{singh2027actionmatter,
+  title     = {Does the Action Matter? {P}robing Action-Conditioned Semantic Forecasting as a World Model for Autonomous Driving},
+  author    = {Singh, Binay Kumar and Lobo, Niels Da Vitoria},
+  booktitle = {Proc. IEEE/CVF Winter Conf. Appl. Comput. Vis. Workshops (WACVW)},
+  note      = {arXiv:2611.24840},
+  year      = {2027}
+}
+
+
+
+@inproceedings{singh2027usr,
+  title     = {Urban State Representation for Autonomous Mobility: A Survey of Multimodal Perception, Architectures, Datasets, and Benchmarks},
+  author    = {Singh, Binay Kumar and Lobo, Niels Da Vitoria},
+  booktitle = {Proc. IEEE/CVF Winter Conf. Appl. Comput. Vis. Workshops (WACVW)},
+  note      = {arXiv:2611.28129},
+  year      = {2027}
+}
+@article{chitta2023transfuser,
+  title     = {{TransFuser}: Imitation with Transformer-Based Sensor Fusion for Autonomous Driving},
+  author    = {Chitta, Kashyap and Prakash, Aditya and Jaeger, Bernhard and Yu, Zehao and Renz, Katrin and Geiger, Andreas},
+  journal   = {IEEE Trans. Pattern Anal. Mach. Intell.},
+  volume    = {45},
+  number    = {11},
+  pages     = {12878--12895},
+  year      = {2023}
+}
+
+@inproceedings{liao2025diffusiondrive,
+  title     = {{DiffusionDrive}: Truncated Diffusion Model for End-to-End Autonomous Driving},
+  author    = {Liao, Bencheng and Chen, Shaoyu and Yin, Haoran and Jiang, Bo and Wang, Cheng and Yan, Sixu and Zhang, Xinbang and Li, Xiangyu and Zhang, Ying and Zhang, Qian and Wang, Xinggang},
+  booktitle = {Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)},
+  pages     = {12037--12047},
+  year      = {2025}
+}
+
+@inproceedings{li2025hydranext,
+  title     = {{Hydra-NeXt}: Robust Closed-Loop Driving with Open-Loop Training},
+  author    = {Li, Zhenxin and Wang, Shihao and Lan, Shiyi and Yu, Zhiding and Wu, Zuxuan and Alvarez, Jose M.},
+  booktitle = {Proc. IEEE/CVF Int. Conf. Comput. Vis. (ICCV)},
+  pages     = {27305--27314},
+  year      = {2025}
+}
+
+@inproceedings{yao2026drivesuprim,
+  title     = {{DriveSuprim}: Towards Precise Trajectory Selection for End-to-End Planning},
+  author    = {Yao, Wenhao and Li, Zhenxin and Lan, Shiyi and Wang, Zi and Sun, Xinglong and Alvarez, Jose M. and Wu, Zuxuan},
+  booktitle = {Proc. AAAI Conf. Artif. Intell. (AAAI)},
+  volume    = {40},
+  number    = {14},
+  year      = {2026}
+}
